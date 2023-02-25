@@ -1,5 +1,26 @@
+@use '../utils' as U;
 .container {
   width: 95%;
   max-width: 110rem;
   margin-inline: auto;
+}
+
+.burger {
+  cursor: pointer;
+  transition: 0.2s ease;
+  &:hover path {
+    fill: U.$clr-primary-orange;
+  }
+}
+
+.hidden {
+  // transform-origin: left;
+  // animation: slideLeft 0.2s ease forwards;
+  display: none !important;
+}
+
+.after-hidden {
+  &::after {
+    display: none !important;
+  }
 }
